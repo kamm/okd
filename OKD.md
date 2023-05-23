@@ -691,10 +691,11 @@ parameters:
   pathPattern: ${.PVC.namespace}/${.PVC.annotations.nfs.io/storage-path}
 provisioner: k8s-sigs.io/nfs-subdir-external-provisioner
 ```
+## Podsumowanie
 To kończy proces instalacji i minimalnej konfiguracji klastra OKD. 
 W przypadku "pełnego" OpenShifta (platnego) proces instalacji jest identyczny, różnice to pobranie właściwego instalatora (zamiast OKD z Githuba należy pobrać OpenShift od RedHata). Oczywiście, nic nmie stoi na przeszkodzie aby w swoim labie postawić taki klaster - istnieje wersja testowa na 60 dni. Całość do pobrania z https://console.redhat.com/openshift/downloads.
 Na zakończenie chciałbym jeszcze wskazać 2 ciekawe źrodła - jest to instrukcja instalacji klastra w wersji 4.5 autorstwa Craiga Robinsona https://itnext.io/guide-installing-an-okd-4-5-cluster-508a2631cbee oraz pewnego rodzaju uzupełnienie w postaci zapisu streama z instalacji według tej instukcji  https://www.youtube.com/watch?v=qh1zYW7BLxE. Warto przejrzeć też inne wpisy na blogu Craiga - jest tam wiele instrukcji dotyczących instalacji OpenShifta na różne sposoby.
-Przy tworzeniu tej istrukcji pomocny też był ocp4-helpernode https://github.com/redhat-cop/ocp4-helpernode - zautomatyzowany ansiblem sposób budowy bastiona. Właśnie z niego zaczerpnąłem pomysł postawienie własnego serwera DHCP a nie opieranie się na dodatkowej maszynie z postawionym pfsensem.
+Przy tworzeniu tej istrukcji pomocny też był ocp4-helpernode https://github.com/redhat-cop/ocp4-helpernode - zautomatyzowany ansiblem sposób budowy bastiona. Właśnie z niego zaczerpnąłem pomysł postawienie własnego serwera DHCP a nie opieranie się na dodatkowej maszynie z postawionym pfsensem. Helpernode używa DHCP, jednak jest nastawiony na 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUxNTI5Mzc4XX0=
+eyJoaXN0b3J5IjpbNzMyNDIxNDI3LDc1MTUyOTM3OF19
 -->
